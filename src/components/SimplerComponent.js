@@ -1,16 +1,10 @@
 import React from 'react'
 
 
-const SimplerComponent = () => {
-
-  function handleClick(event) {
-    console.log("hello")
-    return true
-  }
-
+const SimplerComponent = (props) => {
   return (
-    <div onClick={handleClick}>
-      I am just happy {handleClick() ? `!` : `.`}
+    <div onClick={props.handleClick}>
+      I am just happy{props.handleClick ? `!` : `.`}
     </div>
   )
 }
